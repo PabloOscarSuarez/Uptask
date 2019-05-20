@@ -1,18 +1,10 @@
+//construido en MVC , cada pieza separada patron de diseño de software
 const express= require('express');
 const router = express.Router()
+//importo controlador
+const controller=  require('../controllers/proyectosController')
 module.exports=function() {
-    router.get("/",(req,res)=>{
-        res.send("hola");
-
-    });
-    router.get("/nosotros",(req,res)=>{
-        res.send("hola");
-
-    });
-
-
+    //pagina home 
+    router.get("/",controller.proyectosHome);
     return router
-
-
-
 }
